@@ -11,7 +11,7 @@ import UIKit
 class MovieDetailsViewController: UIViewController {
     
     
-    var movieData : moviesModel = moviesModel(name: "Joker", release: 2000, actors: [""], rating: 10.0, rated: "PG-13")
+    var movieData : MoviesModel!
     
     @IBOutlet weak var movieImg: UIImageView!
     @IBOutlet weak var movieName: UINavigationItem!
@@ -51,13 +51,11 @@ class MovieDetailsViewController: UIViewController {
         
         self.actorImg1.image = UIImage(named: movieData.actors[0])
         self.actorName1.text = movieData.actors[0]
-        self.actorImg2.image = UIImage(named: movieData.actors[1])
+       self.actorImg2.image = UIImage(named: movieData.actors[1])
         self.actorName2.text = movieData.actors[1]
 
         self.actorImg3.image = UIImage(named: movieData.actors[2])
         self.actorName3.text = movieData.actors[2]
-
-        
     }
     
     func configureUI(){
